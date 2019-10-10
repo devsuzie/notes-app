@@ -51,7 +51,7 @@ h1, h2 {
     -moz-appearance: none;
     appearance: none;
     padding: 0 .5em;
-    width: 180px;
+    width: 200px;
     line-height: 35px;
     height: 35px;
     font-family: inherit;
@@ -141,10 +141,6 @@ h1, h2 {
     margin-top: 1em;
 }
 
-#m-create-note {
-    display: none;
-}
-
 #notes {
     width: calc(100% - 360px);
     padding-left: 120px;
@@ -162,30 +158,43 @@ h1, h2 {
     margin: 5px 10px;
     padding: 100px 35px 50px 35px;
     width: calc(50% - 100px);
-    height: 170px;
     box-shadow: 5px 15px 20px #d1d1d1;
 }
 
 #notes a > p {
-    margin: 0;
+  margin: 0;
+  display:block;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  width: 200px;
+
+  white-space: normal; 
+  text-align: left; 
+  word-wrap: break-word; 
+  display: -webkit-box; 
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
 }
 
 #notes a > p:nth-of-type(1) {
-    font-size: 30px;
+    font-size: 27px;
     font-weight: 900;
     margin-bottom: .4em;
+    line-height: 1.2em;
+    height: 2.4em;
 }
 
 #notes a > p:nth-of-type(2) {
     font-size: 16px;
     font-weight: 100;
     color: #525252;
-    line-height: 1.3em;
+    line-height: 1.5em;
+    height: 4.5em;
+    margin-bottom: 1em;
 }
 
 #notes a > span {
     display: inline-block;
-    margin-top: .5em;
     font-weight: 900
 }
 
@@ -218,7 +227,7 @@ h1, h2 {
     background: none;
     line-height: 5rem;
     height: 5rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 900;
     border: none;
     border-bottom: #121212;
@@ -233,6 +242,7 @@ h1, h2 {
     width: 100%;
     border: none;
     height: 400px;
+    font-size: 1.2em;
     font-family: 'Avenir';
     font-weight: 100;
     padding: 1em 0;
