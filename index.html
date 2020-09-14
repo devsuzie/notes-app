@@ -1,66 +1,75 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>NOTES APP</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-    <meta name="format-detection" content="telephone=no, address=no, email=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="format-detection"
+      content="telephone=no, address=no, email=no"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
 
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="stylesheet" href="/styles/m-styles.css">
-</head>
-<body>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/m-styles.css" />
+  </head>
+  <body>
     <header class="header">
-        <h1>Full Moon</h1>
-        <h2>Spend a month writing everyday</h2>
+      <h1>Full Moon</h1>
+      <h2>Spend a month writing everyday</h2>
     </header>
     <div class="actions">
-        <input type="text" id="search-text" class="input" placeholder="Filter notes">
-        <select class="dropdown" id="filter-by">
-            <option value="byEdited">Sort by last edited</option>
-            <option value="byCreated">Sort by recently created</option>
-            <option value="alphabetical">Sort by alphabetically</option>
-        </select>
+      <input
+        type="text"
+        id="search-text"
+        class="input"
+        placeholder="Filter notes"
+      />
+      <select class="dropdown" id="filter-by">
+        <option value="byEdited">Sort by last edited</option>
+        <option value="byCreated">Sort by recently created</option>
+        <option value="alphabetical">Sort by alphabetically</option>
+      </select>
     </div>
     <div class="container">
-        <div class="calender">
-            <div class="cld-title">
-                <span class="month-num"></span>
-                <span class="month-string"></span>
-            </div>
-            <div class="cld-group">
-                <ul id="day">
-                    <li><a href="#">M</a></li>
-                    <li><a href="#">T</a></li>
-                    <li><a href="#">W</a></li>
-                    <li><a href="#">T</a></li>
-                    <li><a href="#">F</a></li>
-                    <li><a href="#">S</a></li>
-                    <li><a href="#">S</a></li>
-                </ul>
-                <ul id="days">
-                </ul>
-            </div>
-            <button id="create-note" class="button">Create Note</button>
+      <div class="calender">
+        <div class="cld-title">
+          <span class="month-num"></span>
+          <span class="month-string"></span>
         </div>
-        
-        <div id="notes">
+        <div class="cld-group">
+          <ul id="day">
+            <li><a href="#">S</a></li>
+            <li><a href="#">M</a></li>
+            <li><a href="#">T</a></li>
+            <li><a href="#">W</a></li>
+            <li><a href="#">T</a></li>
+            <li><a href="#">F</a></li>
+            <li><a href="#">S</a></li>
+          </ul>
+          <ul id="days"></ul>
         </div>
+        <button id="create-note" class="button">Create Note</button>
+      </div>
+
+      <div id="notes"></div>
     </div>
 
     <script src="./app/calendar.js"></script>
     <script>
-        window.addEventListener('load', () => {
-            calendar.init()
-        })
+      window.addEventListener("load", () => {
+        calendar.init();
+      });
     </script>
     <script src="/app/uuid4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.min.js"></script>
     <script src="/app/notes-functions.js"></script>
     <script src="/app/notes-app.js"></script>
-</body>
+  </body>
 </html>
